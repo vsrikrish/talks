@@ -1,0 +1,275 @@
+[
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#mordm-overview",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#mordm-overview",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "MORDM Overview",
+    "text": "MORDM Overview\n\nOverview of Multi-Objective Decision-Making\nSource: Kasprzyk et al (2013). Many objective robust decision making for complex environmental systems undergoing change. Environmental Modelling and Software, 42, 55–71. https://doi.org/10.1016/j.envsoft.2012.12.007"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#mordm-combines-several-concepts",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#mordm-combines-several-concepts",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "MORDM Combines Several Concepts",
+    "text": "MORDM Combines Several Concepts\n\n\nTradeoff Analysis\nMulti-Objective Optimization\nRobustness and Scenario Discovery\n\n\n\nThese do not need to be combined into a joint framework (MORDM), but are useful for a broad array of analyses."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#decision-making-often-involves-navigating-multiple-objectivesmetrics",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#decision-making-often-involves-navigating-multiple-objectivesmetrics",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Decision-Making Often Involves Navigating Multiple Objectives/Metrics",
+    "text": "Decision-Making Often Involves Navigating Multiple Objectives/Metrics\n\nDifferent stakeholders often have different priorities, values, and objectives.\nClassical prescriptive approaches:\n\nPost-hoc analysis\nFormulate as constraints\nCombine into a single utility function"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#multiple-objectives-in-crm",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#multiple-objectives-in-crm",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Multiple Objectives in CRM",
+    "text": "Multiple Objectives in CRM\n\nCharacteristics of Problems\nSource: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. https://doi.org/10.1146/annurev-earth-080320-055847"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#but-what-if-we-dont-know-thresholdsweights",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#but-what-if-we-dont-know-thresholdsweights",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "…But What If We Don’t Know Thresholds/Weights?",
+    "text": "…But What If We Don’t Know Thresholds/Weights?\nOften it is not a priori clear what relevant constraints or utility weights ought to be (or can be).\nWe may also not know which objectives are in tension with each other."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#tradeoffs-can-be-understood-through-exploratory-analyses",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#tradeoffs-can-be-understood-through-exploratory-analyses",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Tradeoffs Can Be Understood through Exploratory Analyses",
+    "text": "Tradeoffs Can Be Understood through Exploratory Analyses\nWe can search the outcome space to understand:\n\nWhich objectives are synergistic/antagonistic;\nWhat the achievable ranges of these objectives are."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-managing-climate-change",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-managing-climate-change",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Managing Climate Change",
+    "text": "Example: Managing Climate Change\n\n\n\n\n\nClimate Risk Management Levers\n\n\n\n\nSource: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. https://doi.org/10.1146/annurev-earth-080320-055847"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Mitigation vs. SRM",
+    "text": "Example: Mitigation vs. SRM\n\nScatterplot of CRM Objectives\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm-1",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm-1",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Mitigation vs. SRM",
+    "text": "Example: Mitigation vs. SRM\n\nParallel Axis Plot of CRM Objectives\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#dominated-and-non-dominated-solutions",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#dominated-and-non-dominated-solutions",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Dominated and Non-Dominated Solutions",
+    "text": "Dominated and Non-Dominated Solutions\nHowever, many possible solutions will inevitable be dominated: they are outperformed across all possible objectives by some other solution.\nA solution is non-dominated if the only way to improve with respect to one objective is to deterioriate with respect to another."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#illustrating-non-dominated-solutions",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#illustrating-non-dominated-solutions",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Illustrating Non-Dominated Solutions",
+    "text": "Illustrating Non-Dominated Solutions\n\n\n\n\n\nSpace of All Solutions\n\n\n\n\n\n\nDominated vs. Non-Dominated Solutions"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#dominated-solutions-and-pareto-fronts",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#dominated-solutions-and-pareto-fronts",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Dominated Solutions and Pareto Fronts",
+    "text": "Dominated Solutions and Pareto Fronts\nThe set of non-dominated solution is called the Pareto front.\nFor most interesting problems, the Pareto front is impossible to find analytically."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#finding-pareto-fronts",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#finding-pareto-fronts",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Finding Pareto Fronts",
+    "text": "Finding Pareto Fronts\nThe best we can typically do is to find an approximate Pareto front using a Multi-Objective Evolutionary Algorithm (MOEA).\n\nBut:\nDo we actually think the “optimal” solution from our model is the real-world optimum?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#moeas-and-convergence",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#moeas-and-convergence",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "MOEAs and Convergence",
+    "text": "MOEAs and Convergence\nAs EAs are heuristic methods, need to be careful about convergence.\n\nCompare results with multiple seeds;\nIf you aren’t sure you’ve run it long enough, run it longer."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#once-we-have-a-pareto-front",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#once-we-have-a-pareto-front",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Once We Have A Pareto Front…",
+    "text": "Once We Have A Pareto Front…\n…We can:\n\nIdentify thresholds;\nSelect and analyze decision alternatives"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm-2",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-mitigation-vs.-srm-2",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Mitigation vs. SRM",
+    "text": "Example: Mitigation vs. SRM\n\nParallel Axis Plot of CRM Objectives\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#decision-making-and-uncertainty",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#decision-making-and-uncertainty",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Decision-Making and Uncertainty",
+    "text": "Decision-Making and Uncertainty\nDecision frameworks often simplify representations of uncertainties to facilitate optimization.\nThis can involve:\n\nOptimizing with respect to a “best estimate”;\nAssuming a single probability distribution to compute moments or estimators."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#deep-uncertainty",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#deep-uncertainty",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Deep Uncertainty",
+    "text": "Deep Uncertainty\nBut often, uncertainties are deep: there is no consensus probability distribution, and outcomes can be driven by the choice of distribution.\n\nFor example:\n\nWhat will future CO2 emissions be?\nHow will future changes to technology impact energy use?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-projecting-co2-emissions",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-projecting-co2-emissions",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Projecting CO2 Emissions",
+    "text": "Example: Projecting CO2 Emissions\n\n\n\n\n\nProjections of future CO2 Emissions\n\n\n\n\nSource: Srikrishnan et al (2022). Probabilistic projections of baseline twenty-first century CO2 emissions using a simple calibrated integrated assessment model. Climatic Change, 170(3), 37. https://doi.org/10.1007/s10584-021-03279-7"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#crm-and-deep-uncertainty",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#crm-and-deep-uncertainty",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "CRM and Deep Uncertainty",
+    "text": "CRM and Deep Uncertainty\n\nCharacteristics of Problems\nSource: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. https://doi.org/10.1146/annurev-earth-080320-055847"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#robustness-and-deep-uncertainty",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#robustness-and-deep-uncertainty",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Robustness and Deep Uncertainty",
+    "text": "Robustness and Deep Uncertainty\nIf we have to make these assumptions, how can we understand the robustness of a resulting solution?\nIn this context, robustness refers to the ability of a system to achieve “good” outcomes under deviations from the design assumptions."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#what-is-robustness",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#what-is-robustness",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "What Is Robustness?",
+    "text": "What Is Robustness?\nMore formally:\n\n\n[Robustness is] “the insensitivity of system design to errors, random or otherwise, in the estimates of those parameters affecting design choice”\n\n\n– Matalas and Fiering (1977); via Herman et al (2015)"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#what-are-good-outcomes",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#what-are-good-outcomes",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "What Are “Good” Outcomes?",
+    "text": "What Are “Good” Outcomes?\nImportant to be specific: there are many different ways to conceptualize and measure robustness.\n\nAbility to achieve a threshold across different states of the world?\nDegradation from “optimal” outcome under perfect information?\nSomething else?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Needs For Robustness Analysis",
+    "text": "Needs For Robustness Analysis\n\nMetric for robustness\nAlternative States of the World/Uncertainty Representations"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Robustness Overview",
+    "text": "Robustness Overview\n\n\n\n\n\nRobustness Taxonomy\n\n\n\n\nSource: Herman et al (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: SRM vs. Mitigation",
+    "text": "Example: SRM vs. Mitigation\n\nRobustness of CRM Strategies\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#what-drives-outcomes-or-lack-of-robustness",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#what-drives-outcomes-or-lack-of-robustness",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "What Drives Outcomes (Or Lack of Robustness)?",
+    "text": "What Drives Outcomes (Or Lack of Robustness)?\nOnce we have done our exploratory or robustness analysis, it’s likely that many states of the world do not perform adequately.\nTwo main tools for understanding which scenarios lead to different outcomes (and why):\n\nSensitivity Analysis\nScenario Discovery"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#sensitivity-analysis",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#sensitivity-analysis",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Sensitivity Analysis",
+    "text": "Sensitivity Analysis\n\n\nSensitivity Analysis involves identifying or ranking the model factors that most (or least) influence model outputs.\n\n\n\n\nUncertainty Characterization E-Book Logo\n\n\n\nReed et al (2022). Addressing Uncertainty in MultiSector Dynamics Research, https://uc-ebook.org/."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#goals-of-sensitivity-analysis",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#goals-of-sensitivity-analysis",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Goals of Sensitivity Analysis",
+    "text": "Goals of Sensitivity Analysis\n\nGoals of Sensitivity Analysis\nSource: Reed et al (2022). Addressing Uncertainty in MultiSector Dynamics Research, https://uc-ebook.org/."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#types-of-sensitivity-analysis",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#types-of-sensitivity-analysis",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Types of Sensitivity Analysis",
+    "text": "Types of Sensitivity Analysis\nSensitivity analyses can be broadly categorized as local or global.\n\nLocal SA: Vary uncertain factors around reference value(s)\nGlobal SA: Vary uncertain factors across entire range.\n\nCan also vary factors one-at-a-time or jointly."
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-baseline-co2-emissions",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-baseline-co2-emissions",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Baseline CO2 Emissions",
+    "text": "Example: Baseline CO2 Emissions\n\n\n\n\n\nGlobal Sensitivities for CO2 Emissions Model\n\n\n\n\nSource: Srikrishnan et al (2022). Probabilistic projections of baseline twenty-first century CO2 emissions using a simple calibrated integrated assessment model. Climatic Change, 170(3), 37. https://doi.org/10.1007/s10584-021-03279-7"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#key-considerations-for-sa",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#key-considerations-for-sa",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Key Considerations for SA",
+    "text": "Key Considerations for SA\n\nLocal vs. Global/OAT vs. Joint\nHow many model evaluations do you need/what is the computational complexity of the model?\nWhat range/distribution is being used for each factor?\nWhat is the design of experiments/sampling strategy?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#scenario-discovery",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#scenario-discovery",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Scenario Discovery",
+    "text": "Scenario Discovery\nScenario Discovery refers to the identification of consequential states of the world/scenarios.\nFor example:\n\nWhat states of the world result in a loss of adequate performance/outcomes?\nAre there different modes/clusters of similar outcomes?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#approaches-for-scenario-discovery",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#approaches-for-scenario-discovery",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Approaches for Scenario Discovery",
+    "text": "Approaches for Scenario Discovery\n\nClustering\nMachine Learning Classifiers (PRIM, CART, SVMs, ANNs)"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-water-scarcity",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-water-scarcity",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: Water Scarcity",
+    "text": "Example: Water Scarcity\n\nScenario Discovery for Water Scarcity\nSource: Birnbaum et al (2022). Drivers of Future Physical Water Scarcity and Its Economic Impacts in Latin America and the Caribbean. Earth’s Future, 10(8), e2022EF002764. https://doi.org/10.1029/2022EF002764"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#key-questions-for-scenario-discovery",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#key-questions-for-scenario-discovery",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Key Questions for Scenario Discovery",
+    "text": "Key Questions for Scenario Discovery\n\nIs the discovery of “types” of outcomes, or do you have a classification (acceptable/not)?\nWhat next? How do we communicate/illustrate/synthesize the results?"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#discussion-points",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#discussion-points",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Discussion Points",
+    "text": "Discussion Points\n\nHow can we incorporate these concepts into projects/proposals?\nAre there valuable training resources/opportunities for students/postdocs?\nHow to incorporate as part of a stakeholder-driven project?\n\nKey challenges: communication and interpretability."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Notebooks",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\n\n\n\n\nAbout\n\n\nundefined\n\n\nundefined\n\n\n\n\nIntroduction to Multi-Objective Robust Decision Making (MORDM)\n\n\n8/8/23\n\n\nInvalid Date\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  }
+]
