@@ -5,31 +5,31 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Notebooks</title>
-<link>https://viveks.me/notebooks/index.html</link>
-<atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
+<title>Talks</title>
+<link>https://viveks.me/talks/index.html</link>
+<atom:link href="https://viveks.me/talks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.78</generator>
 <lastBuildDate>Tue, 08 Aug 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title></title>
   <dc:creator>Vivek Srikrishnan</dc:creator>
-  <link>https://viveks.me/notebooks/Dartmouth-CRM-2023-MORDM/index.html</link>
+  <link>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/index.html</link>
   <description><![CDATA[ undefined ]]></description>
-  <guid>https://viveks.me/notebooks/Dartmouth-CRM-2023-MORDM/index.html</guid>
+  <guid>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/index.html</guid>
   <pubDate>Tue, 08 Aug 2023 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>About</title>
-  <link>https://viveks.me/notebooks/about.html</link>
+  <link>https://viveks.me/talks/about.html</link>
   <description><![CDATA[ 
 <p>About this blog</p>
 
 
  ]]></description>
-  <guid>https://viveks.me/notebooks/about.html</guid>
-  <pubDate>Tue, 08 Aug 2023 13:49:44 GMT</pubDate>
-  <media:content url="https://viveks.me/notebooks/profile.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://viveks.me/talks/about.html</guid>
+  <pubDate>Tue, 08 Aug 2023 14:05:47 GMT</pubDate>
+  <media:content url="https://viveks.me/talks/profile.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

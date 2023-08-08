@@ -1,1 +1,1 @@
-Sitemap: https://viveks.me/notebooks/sitemap.xml
+Sitemap: https://viveks.me/talks/sitemap.xml
