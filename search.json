@@ -168,6 +168,13 @@
     "text": "What Are “Good” Outcomes?\nImportant to be specific: there are many different ways to conceptualize and measure robustness.\n\nAbility to achieve a threshold across different states of the world?\nDegradation from “optimal” outcome under perfect information?\nSomething else?"
   },
   {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Example: SRM vs. Mitigation",
+    "text": "Example: SRM vs. Mitigation\n\nRobustness of CRM Strategies\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
+  },
+  {
     "objectID": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
     "href": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
     "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
@@ -187,13 +194,6 @@
     "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
     "section": "Examples of Robustness Metrics",
     "text": "Examples of Robustness Metrics\n\nRegret: penalize deviation from optimum or baseline.\nSatisfycing: measure how often outcomes achieve thresholds."
-  },
-  {
-    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
-    "href": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
-    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
-    "section": "Example: SRM vs. Mitigation",
-    "text": "Example: SRM vs. Mitigation\n\nRobustness of CRM Strategies\nSource: Marangoni et al (in review), Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C"
   },
   {
     "objectID": "Dartmouth-CRM-2023-MORDM/index.html#what-drives-outcomes-or-lack-of-robustness",
