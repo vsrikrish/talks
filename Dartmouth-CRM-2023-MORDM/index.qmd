@@ -250,6 +250,15 @@ Important to be specific: there are many different ways to conceptualize and mea
 - Degradation from "optimal" outcome under perfect information?
 - Something else?
 
+## Example: SRM vs. Mitigation
+
+![Robustness of CRM Strategies](figures/mit_vs_srm_multi_unc3.svg){width=80%}
+
+::: {.caption}
+Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
+:::
+
+
 ## Robustness Overview
 
 :::: {.columns .v-center-container}
@@ -282,13 +291,6 @@ Source: McPhail et al (2018). Robustness Metrics: How Are They Calculated, When 
 1. Regret: penalize deviation from optimum or baseline.
 2. Satisfycing: measure how often outcomes achieve thresholds.
 
-## Example: SRM vs. Mitigation
-
-![Robustness of CRM Strategies](figures/mit_vs_srm_multi_unc3.svg){width=80%}
-
-::: {.caption}
-Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
-:::
 
 # Sensitivity Analysis and Scenario Discovery
 
