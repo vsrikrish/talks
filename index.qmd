@@ -1,0 +1,16 @@
+---
+listing:
+  contents: "."
+  sort: "date-modified desc"
+  type: table
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, date, date-modified]
+  feed: true
+  date-format: short
+page-layout: full
+title-block-banner: false
+---
+
+

@@ -17,13 +17,13 @@ format:
         toc-title: "Overview"
         history: false
         link-external-newwindow: true
-        theme: css/slides.scss
+        theme: ../css/slides.scss
         template-partials:
-            - title-slide.html
+            - ../title-slide.html
         menu:
             numbers: true
         html-math-method: mathjax
-        include-in-header: mathjax-config.html
+        include-in-header: ../mathjax-config.html
         date-format: long
         fig-align: center
         pdf-page-height-offset: 1
