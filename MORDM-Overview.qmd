@@ -1,0 +1,375 @@
+---
+title: "Introduction to Multi-Objective Robust Decision Making (MORDM)"
+author: "Vivek Srikrishnan"
+course: "CRM Summer Fest"
+institution: "Dartmouth University"
+date: "August 8, 2023"
+format:
+    revealjs:
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        width: 1280
+        height: 720
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: util/slides.scss
+        template-partials:
+            - util/title-slide.html
+        menu:
+            numbers: true
+        html-math-method: mathjax
+        include-in-header: util/mathjax-config.html
+        date-format: long
+        fig-align: center
+        pdf-page-height-offset: 1
+        pdf-separate-fragments: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Multi-Objective Decision-Making
+
+## MORDM Overview
+
+![Overview of Multi-Objective Decision-Making](figures/mordm-overview.svg)
+
+::: {.caption}
+Source: Kasprzyk et al (2013). Many objective robust decision making for complex environmental systems undergoing change. Environmental Modelling and Software, 42, 55–71. <https://doi.org/10.1016/j.envsoft.2012.12.007>
+:::
+
+## MORDM Combines Several Concepts
+
+::: {.incremental}
+- **Tradeoff Analysis**
+- **Multi-Objective Optimization**
+- **Robustness and Scenario Discovery**
+:::
+
+::: {.fragment .fade-in}
+These do not need to be combined into a joint framework (MORDM), but are useful for a broad array of analyses.
+:::
+
+# Multiple Objectives and Tradeoffs
+
+## Decision-Making Often Involves Navigating Multiple Objectives/Metrics
+
+- Different stakeholders often have different priorities, values, and objectives.
+- Classical prescriptive approaches:
+    - *Post-hoc* analysis
+    - Formulate as constraints
+    - Combine into a single utility function
+
+## Multiple Objectives in CRM
+
+![Characteristics of Problems](figures/crm-properties.svg)
+
+::: {.caption}
+Source: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. <https://doi.org/10.1146/annurev-earth-080320-055847>
+:::
+
+
+## ...But What If We Don't Know Thresholds/Weights?
+
+Often it is not *a priori* clear what relevant constraints or utility weights ought to be (or can be).
+
+We may also not know which objectives are in tension with each other.
+
+## Tradeoffs Can Be Understood through Exploratory Analyses
+
+We can search the outcome space to understand:
+
+1. Which objectives are synergistic/antagonistic;
+2. What the achievable ranges of these objectives are.
+
+## Example: Managing Climate Change
+
+:::: {.columns .v-center-container}
+::: {.column width=60%}
+![Climate Risk Management Levers](figures/crm-levers.svg){width=80%}
+:::
+::: {.column width=40%}
+::: {.caption}
+Source: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. <https://doi.org/10.1146/annurev-earth-080320-055847>
+:::
+:::
+::::
+
+
+
+## Example: Mitigation vs. SRM
+
+![Scatterplot of CRM Objectives](figures/fig_scatter_2d_objs_by_srm.svg)
+
+::: {.caption}
+Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
+:::
+
+## Example: Mitigation vs. SRM
+
+![Parallel Axis Plot of CRM Objectives](figures/fig_parallel_plot_highlight.svg)
+
+::: {.caption}
+Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
+:::
+
+## Dominated and Non-Dominated Solutions
+
+However, many possible solutions will inevitable be **dominated**: they are outperformed across all possible objectives by some other solution.
+
+A solution is **non-dominated** if the only way to improve with respect to one objective is to deterioriate with respect to another.
+
+
+## Illustrating Non-Dominated Solutions 
+
+:::: {.columns}
+::: {.column width=50%}
+
+![Space of All Solutions](figures/all_solutions.png)
+:::
+::: {.column width=50%}
+![Dominated vs. Non-Dominated Solutions](figures/dominated_solutions.png)
+
+:::
+::::
+
+## Dominated Solutions and Pareto Fronts
+
+The set of non-dominated solution is called the **Pareto front**.
+
+For most interesting problems, the Pareto front is impossible to find analytically.
+
+## Finding Pareto Fronts
+
+The best we can typically do is to find an *approximate* Pareto front using a Multi-Objective Evolutionary Algorithm (MOEA).
+
+::: {.fragment .fade-in}
+**But**:
+
+Do we actually think the "optimal" solution from our model is the real-world optimum? 
+:::
+
+## MOEAs and Convergence
+
+As EAs are heuristic methods, need to be careful about convergence.
+
+- Compare results with multiple seeds;
+- If you aren't sure you've run it long enough, run it longer.
+
+## Once We Have A Pareto Front...
+
+...We can:
+
+- Identify thresholds; 
+- Select and analyze decision alternatives
+
+
+## Example: Mitigation vs. SRM
+
+![Parallel Axis Plot of CRM Objectives](figures/fig_parallel_plot_highlight.svg)
+
+::: {.caption}
+Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
+:::
+
+# Robustness and Scenario Discovery
+
+## Decision-Making and Uncertainty
+
+Decision frameworks often simplify representations of uncertainties to facilitate optimization.
+
+This can involve:
+
+- Optimizing with respect to a "best estimate";
+- Assuming a single probability distribution to compute moments or estimators.
+
+## Deep Uncertainty
+
+But often, uncertainties are **deep**: there is no consensus probability distribution, and outcomes can be driven by the choice of distribution.
+
+::: {.fragment .fade-in}
+For example:
+
+- What will future CO~2~ emissions be?
+- How will future changes to technology impact energy use?
+:::
+
+## Example: Projecting CO~2~ Emissions
+
+:::: {.columns .v-center-container}
+::: {.column width=70%}
+![Projections of future CO~2~ Emissions](figures/co2-projections.png){width=90%}
+:::
+::: {.column width=30%}
+::: {.caption}
+Source: Srikrishnan et al (2022). Probabilistic projections of baseline twenty-first century CO~2~ emissions using a simple calibrated integrated assessment model. Climatic Change, 170(3), 37. <https://doi.org/10.1007/s10584-021-03279-7>
+:::
+:::
+::::
+
+## CRM and Deep Uncertainty
+
+![Characteristics of Problems](figures/crm-properties.svg)
+
+::: {.caption}
+Source: Keller et al (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. <https://doi.org/10.1146/annurev-earth-080320-055847>
+:::
+
+## Robustness and Deep Uncertainty
+
+If we have to make these assumptions, how can we understand the robustness of a resulting solution?
+
+In this context, **robustness** refers to the ability of a system to achieve "good" outcomes under deviations from the design assumptions.
+
+## What Is Robustness?
+
+More formally:
+
+::: {.quote}
+> [Robustness is] "the insensitivity of system design to errors, random or otherwise, in the estimates of those parameters affecting design choice" 
+
+::: {.cite}
+-- Matalas and Fiering (1977); via [Herman et al (2015)](https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509)
+:::
+:::
+
+## What Are "Good" Outcomes?
+
+Important to be specific: there are many different ways to conceptualize and measure robustness.
+
+- Ability to achieve a threshold across different states of the world?
+- Degradation from "optimal" outcome under perfect information?
+- Something else?
+
+## Needs For Robustness Analysis
+
+1. Metric for robustness
+2. Alternative States of the World/Uncertainty Representations
+
+## Robustness Overview
+
+:::: {.columns .v-center-container}
+::: {.column width=70%}
+![Robustness Taxonomy](figures/robustness_frameworks.svg){width=80%}
+:::
+::: {.column width=30%}
+::: {.caption}
+Source: Herman et al (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. <https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509>
+:::
+:::
+::::
+
+## Example: SRM vs. Mitigation
+
+![Robustness of CRM Strategies](figures/mit_vs_srm_multi_unc3.svg){width=80%}
+
+::: {.caption}
+Source: Marangoni et al (in review), *Robust Solar Radiation Management Strategies to Keep Global Temperature Rise Well-Below 2°C*
+:::
+
+# Sensitivity Analysis and Scenario Discovery
+
+## What Drives Outcomes (Or Lack of Robustness)?
+
+Once we have done our exploratory or robustness analysis, it's likely that many states of the world do not perform adequately.
+
+Two main tools for understanding which scenarios lead to different outcomes (and why):
+
+1. Sensitivity Analysis
+2. Scenario Discovery
+
+## Sensitivity Analysis
+
+:::: {.columns .v-center-containers}
+::: {.column width=50%}
+**Sensitivity Analysis** involves identifying or ranking the model factors that most (or least) influence model outputs.
+:::
+::: {.column width=50%}
+![Uncertainty Characterization E-Book Logo](https://uc-ebook.org/images/ebook_thumbnail_1.png){width=80%}
+
+::: {.caption}
+Reed et al (2022). Addressing Uncertainty in MultiSector Dynamics Research, <https://uc-ebook.org/>.
+:::
+:::
+::::
+
+## Goals of Sensitivity Analysis
+
+![Goals of Sensitivity Analysis](https://uc-ebook.org/docs/html/_images/figure3_2_factor_mapping.png)
+
+::: {.caption}
+Source: Reed et al (2022). Addressing Uncertainty in MultiSector Dynamics Research, <https://uc-ebook.org/>.
+:::
+
+
+## Types of Sensitivity Analysis
+
+Sensitivity analyses can be broadly categorized as **local** or **global**.
+
+- **Local SA**: Vary uncertain factors around reference value(s)
+- **Global SA**: Vary uncertain factors across entire range.
+
+Can also vary factors **one-at-a-time** or **jointly**.
+
+## Example: Baseline CO~2~ Emissions
+
+:::: {.columns .v-center-container}
+::: {.column width=75%}
+![Global Sensitivities for CO~2~ Emissions Model](figures/co2-sa.png){width=70%}
+:::
+::: {.column width=25%}
+::: {.caption}
+Source: Srikrishnan et al (2022). Probabilistic projections of baseline twenty-first century CO~2~ emissions using a simple calibrated integrated assessment model. Climatic Change, 170(3), 37. <https://doi.org/10.1007/s10584-021-03279-7>
+:::
+:::
+::::
+
+
+## Key Considerations for SA
+
+1. Local vs. Global/OAT vs. Joint
+2. How many model evaluations do you need/what is the computational complexity of the model?
+3. What range/distribution is being used for each factor?
+4. What is the design of experiments/sampling strategy?
+
+## Scenario Discovery
+
+**Scenario Discovery** refers to the identification of consequential states of the world/scenarios.
+
+For example:
+
+- What states of the world result in a loss of adequate performance/outcomes?
+- Are there different modes/clusters of similar outcomes?
+
+## Approaches for Scenario Discovery
+
+- Clustering
+- Machine Learning Classifiers (PRIM, CART, SVMs, ANNs)
+
+## Example: Water Scarcity
+
+![Scenario Discovery for Water Scarcity](figures/scenario-discovery.png){width=80%}
+
+::: {.caption}
+Source: Birnbaum et al (2022). Drivers of Future Physical Water Scarcity and Its Economic Impacts in Latin America and the Caribbean. Earth’s Future, 10(8), e2022EF002764. <https://doi.org/10.1029/2022EF002764>
+:::
+
+## Key Questions for Scenario Discovery
+
+1. Is the discovery of "types" of outcomes, or do you have a classification (acceptable/not)?
+2. What next? How do we communicate/illustrate/synthesize the results?
+
+
+# Discussion
+
+## Discussion Points
+
+- How can we incorporate these concepts into projects/proposals?
+- Are there valuable training resources/opportunities for students/postdocs?
+- How to incorporate as part of a stakeholder-driven project?
+    - Key challenges: communication and interpretability.
