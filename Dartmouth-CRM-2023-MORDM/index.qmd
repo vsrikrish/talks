@@ -35,6 +35,10 @@ execute:
 
 # Multi-Objective Decision-Making
 
+## To Follow Along.
+
+These slides are available at <https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/>.
+
 ## MORDM Overview
 
 ![Overview of Multi-Objective Decision-Making](figures/mordm-overview.svg)
@@ -246,11 +250,6 @@ Important to be specific: there are many different ways to conceptualize and mea
 - Degradation from "optimal" outcome under perfect information?
 - Something else?
 
-## Needs For Robustness Analysis
-
-1. Metric for robustness
-2. Alternative States of the World/Uncertainty Representations
-
 ## Robustness Overview
 
 :::: {.columns .v-center-container}
@@ -263,6 +262,25 @@ Source: Herman et al (2015). How should robustness be defined for water systems 
 :::
 :::
 ::::
+
+
+## Needs For Robustness Analysis
+
+:::: {.columns .v-center-container}
+::: {.column width=70%}
+![Framework for calculating robustness metrics](figures/robustness.png){width=70%}
+:::
+::: {.column width=30%}
+::: {.caption}
+Source: McPhail et al (2018). Robustness Metrics: How Are They Calculated, When Should They Be Used and Why Do They Give Different Results? Earth’s Future, 6(2). <https://doi.org/10.1002/2017EF000649>
+:::
+:::
+::::
+
+## Examples of Robustness Metrics
+
+1. Regret: penalize deviation from optimum or baseline.
+2. Satisfycing: measure how often outcomes achieve thresholds.
 
 ## Example: SRM vs. Mitigation
 

@@ -2,15 +2,20 @@ project:
   type: website
 
 website:
-  site-url: "https://viveks.me/notebooks"
-  title: "Notebooks"
+  site-url: "https://viveks.me/talks"
+  title: "Talks"
   navbar:
     right:
-      - about.qmd
+      - icon: house-fill
+        href: https://viveks.me
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/vsrikrish/notebooks
+      - icon: rss
+        href: index.xml
+  search:
+    location: navbar
+    type: textbox
+
 format:
   html:
     theme: cosmo
