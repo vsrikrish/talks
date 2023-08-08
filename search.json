@@ -168,18 +168,25 @@
     "text": "What Are “Good” Outcomes?\nImportant to be specific: there are many different ways to conceptualize and measure robustness.\n\nAbility to achieve a threshold across different states of the world?\nDegradation from “optimal” outcome under perfect information?\nSomething else?"
   },
   {
-    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
-    "href": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
-    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
-    "section": "Needs For Robustness Analysis",
-    "text": "Needs For Robustness Analysis\n\nMetric for robustness\nAlternative States of the World/Uncertainty Representations"
-  },
-  {
     "objectID": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
     "href": "Dartmouth-CRM-2023-MORDM/index.html#robustness-overview",
     "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
     "section": "Robustness Overview",
     "text": "Robustness Overview\n\n\n\n\n\nRobustness Taxonomy\n\n\n\n\nSource: Herman et al (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#needs-for-robustness-analysis",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Needs For Robustness Analysis",
+    "text": "Needs For Robustness Analysis\n\n\n\n\n\nFramework for calculating robustness metrics\n\n\n\n\nSource: McPhail et al (2018). Robustness Metrics: How Are They Calculated, When Should They Be Used and Why Do They Give Different Results? Earth’s Future, 6(2). https://doi.org/10.1002/2017EF000649"
+  },
+  {
+    "objectID": "Dartmouth-CRM-2023-MORDM/index.html#examples-of-robustness-metrics",
+    "href": "Dartmouth-CRM-2023-MORDM/index.html#examples-of-robustness-metrics",
+    "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
+    "section": "Examples of Robustness Metrics",
+    "text": "Examples of Robustness Metrics\n\nRegret: penalize deviation from optimum or baseline.\nSatisfycing: measure how often outcomes achieve thresholds."
   },
   {
     "objectID": "Dartmouth-CRM-2023-MORDM/index.html#example-srm-vs.-mitigation",
