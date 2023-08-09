@@ -4,6 +4,7 @@ author: "Vivek Srikrishnan"
 course: "CRM Summer Fest"
 institution: "Dartmouth University"
 date: "August 8, 2023"
+location: "Dartmouth"
 format:
     revealjs:
         slide-number: c/t
