@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Model Calibration and Uncertainty Quantification"
+title: "Introduction to Model Calibration"
 author: "Vivek Srikrishnan"
 course: "Math 622"
 institution: "RIT"
