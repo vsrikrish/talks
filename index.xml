@@ -6,17 +6,25 @@
       version="2.0">
 <channel>
 <title>Talks</title>
-<link>https://viveks.me/talks/index.html</link>
+<link>https://viveks.me/talks/</link>
 <atom:link href="https://viveks.me/talks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.78</generator>
-<lastBuildDate>Tue, 08 Aug 2023 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.388</generator>
+<lastBuildDate>Tue, 17 Oct 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title></title>
   <dc:creator>Vivek Srikrishnan</dc:creator>
-  <link>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/index.html</link>
+  <link>https://viveks.me/talks/RIT-MathModeling/</link>
   <description><![CDATA[ undefined ]]></description>
-  <guid>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/index.html</guid>
+  <guid>https://viveks.me/talks/RIT-MathModeling/</guid>
+  <pubDate>Tue, 17 Oct 2023 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Vivek Srikrishnan</dc:creator>
+  <link>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <guid>https://viveks.me/talks/Dartmouth-CRM-2023-MORDM/</guid>
   <pubDate>Tue, 08 Aug 2023 04:00:00 GMT</pubDate>
 </item>
 <item>
@@ -28,7 +36,7 @@
 
  ]]></description>
   <guid>https://viveks.me/talks/about.html</guid>
-  <pubDate>Tue, 08 Aug 2023 18:57:17 GMT</pubDate>
+  <pubDate>Mon, 16 Oct 2023 01:40:31 GMT</pubDate>
   <media:content url="https://viveks.me/talks/profile.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

@@ -1,5 +1,264 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#to-follow-along",
+    "href": "RIT-MathModeling/index.html#to-follow-along",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "To Follow Along",
+    "text": "To Follow Along\nThese slides are available at https://viveks.me/talks/RIT-MathModeling/."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#all-models-are-wrong-but-some-are-useful",
+    "href": "RIT-MathModeling/index.html#all-models-are-wrong-but-some-are-useful",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "“All Models Are Wrong, But Some Are Useful”",
+    "text": "“All Models Are Wrong, But Some Are Useful”\n\n\n…all models are approximations. Essentially, all models are wrong, but some are useful. However, the approximate nature of the model must always be borne in mind….\n\n\n— Box & Draper, Empirical Model Building and Response Surfaces, 1987"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#what-are-models-good-for",
+    "href": "RIT-MathModeling/index.html#what-are-models-good-for",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "What Are Models Good For?",
+    "text": "What Are Models Good For?\n\n\nModels can corroborate a hypothesis by offering evidence to strengthen what may be already partly established through other means…\nThus, the primary value of models is heuristic: Models are representations, useful for guiding further study but not susceptible to proof.\n\n\n— Oreskes et al, “Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences”, 1994"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#models-and-assumptions",
+    "href": "RIT-MathModeling/index.html#models-and-assumptions",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Models And Assumptions",
+    "text": "Models And Assumptions\n\nXKCD Comic 2355\nSource: XKCD 2355"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#model-calibration-validation-and-uncertainty-analysis",
+    "href": "RIT-MathModeling/index.html#model-calibration-validation-and-uncertainty-analysis",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Model Calibration, Validation, and Uncertainty Analysis",
+    "text": "Model Calibration, Validation, and Uncertainty Analysis\nThis implies that it is important to:\n\n\nSelect appropriate parameter values (model calibration);\nMake sure that the calibrated model is capturing key dynamics (model validation);\nAccount for uncertainty in the parameter estimates and projections (uncertainty analysis)"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#these-are-not-really-separate-processes",
+    "href": "RIT-MathModeling/index.html#these-are-not-really-separate-processes",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "These Are Not Really Separate Processes",
+    "text": "These Are Not Really Separate Processes\nCalibration, validation, and uncertainty analysis are not necessary separate “steps”, but often are mixed together in the process of model development and checking."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#what-is-model-calibration",
+    "href": "RIT-MathModeling/index.html#what-is-model-calibration",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "What is Model Calibration?",
+    "text": "What is Model Calibration?\nCalibration involves choosing parameters, ideally based on some principled criteria.\n\n\n[Calibration is] the selection of model parameters and structures to maximize the fidelity of the system model to observational data given model and computational constraints…\n\n\n— Oreskes et al, “Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences”, 1994"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#why-does-calibration-matter",
+    "href": "RIT-MathModeling/index.html#why-does-calibration-matter",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Why Does Calibration Matter?",
+    "text": "Why Does Calibration Matter?\n\nModels are necessarily simplifications of reality.\nMissing or simplified processes may mean that direct translation of physical equation and parameters into the model do not yield the desired behavior."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#approaches-to-calibration",
+    "href": "RIT-MathModeling/index.html#approaches-to-calibration",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Approaches to Calibration",
+    "text": "Approaches to Calibration\n\nHand-Tuning: Manually adjusting parameters until the model output looks “right”.\nStatistical Calibration: Wide category of statistically-based methods to find parameters which are most consistent with data."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#statistical-calibration",
+    "href": "RIT-MathModeling/index.html#statistical-calibration",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Statistical Calibration",
+    "text": "Statistical Calibration\nStatistical methods can involve finding point estimates or distributions of parameters (more on this later)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#formalizing-calibration",
+    "href": "RIT-MathModeling/index.html#formalizing-calibration",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Formalizing Calibration",
+    "text": "Formalizing Calibration\nLet \\(F(\\mathbf{x}; \\theta)\\) be the simulation model function:\n\n\\(\\mathbf{x}\\) are the “control variables,” which are external forcings or variables affecting the simulation setting;\n\\(\\theta\\) are the “calibration variables” or “parameters.”\n\nThen the goal of calibration is to identify parameters \\(\\theta\\) which minimize the mismatch between \\(F(\\mathbf{x}; \\theta)\\) and data \\(\\mathbf{y}\\)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#data-model-discrepancy",
+    "href": "RIT-MathModeling/index.html#data-model-discrepancy",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Data-Model Discrepancy",
+    "text": "Data-Model Discrepancy\nAs mentioned, all models will necessarily be wrong. We formalize this idea with the notion of discrepancy.\nWe can write the data as:\n\\[\\mathbf{y} = z(\\mathbf{x}) + \\varepsilon,\\]\n\n\\(z(\\mathbf{x})\\) is the “true” system state at control variable \\(\\mathbf{x}\\);\n\\(\\varepsilon\\) are observation errors."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#data-model-discrepancy-1",
+    "href": "RIT-MathModeling/index.html#data-model-discrepancy-1",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Data-Model Discrepancy",
+    "text": "Data-Model Discrepancy\nThen the discrepancy \\(\\zeta\\) between the model simulation and the system is:\n\\[\\zeta(\\mathbf{x}; \\theta) = z(\\mathbf{x}) - F(\\mathbf{x}; \\theta).\\]\n\nThen the observations can be written as:\n\\[\n\\mathbf{y} = \\underbrace{F(\\mathbf{x}; \\theta)}_{\\text{model output}} + \\underbrace{\\zeta(\\mathbf{x}; \\theta)}_{\\text{discrepancy}} + \\underbrace{\\varepsilon}_{\\text{error}}\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#why-is-hand-tuning-problematic",
+    "href": "RIT-MathModeling/index.html#why-is-hand-tuning-problematic",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Why is Hand-Tuning Problematic?",
+    "text": "Why is Hand-Tuning Problematic?\nThis representation shows where hand-tuning can fall short:\n\n\nAssumptions about the discrepancy and error are not made explicit;\nAssumptions about discrepancy and error may not be applied consistently;\nThe errors in the data collection process may be large, and neglecting discrepancy and error may result in overfitting to just one realization.\n\n\nAs a result, we will focus on statistical calibration."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#model-calibration-and-discrepancy",
+    "href": "RIT-MathModeling/index.html#model-calibration-and-discrepancy",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Model Calibration and Discrepancy",
+    "text": "Model Calibration and Discrepancy\nStatistical calibration then involves specifying a probability model for the data, which can include:\n\nDistributions/ranges for the calibration parameters;\nA probability model for the discrepancy and observation errors.\n\nThen the goal is to find parameters which maximize the likelihood (probability) of the data."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#example-mean-squared-error",
+    "href": "RIT-MathModeling/index.html#example-mean-squared-error",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Example: Mean-Squared Error",
+    "text": "Example: Mean-Squared Error\nConsider finding parameters \\(\\theta\\) which minimize mean-squared error (MSE):\n\\[\n\\text{MSE} = \\sum_{i=1}^n \\left(y_i - F(x_i; \\theta)\\right)^2.\n\\]\nThis is an extremely common metric used for model calibration. Where does it come from?"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#example-mean-squared-error-1",
+    "href": "RIT-MathModeling/index.html#example-mean-squared-error-1",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Example: Mean-Squared Error",
+    "text": "Example: Mean-Squared Error\nIt turns out this is the same thing as finding the parameters which maximize likelihood under the assumption of normally-distributed errors and discrepancy.\nAssume that the errors are given by \\(\\mathcal{N}(0, \\sigma^2)\\). Then the likelihood of the data given the simulation model is:\n\\[\n\\mathcal{L}(\\theta, \\mathbf{y}; F) = \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi}} \\exp(-\\frac{y_i - F(x_i; \\theta)^2}{2\\sigma^2})\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#example-mean-squared-error-2",
+    "href": "RIT-MathModeling/index.html#example-mean-squared-error-2",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Example: Mean-Squared Error",
+    "text": "Example: Mean-Squared Error\nTo maximize this likelihood, let’s take the logarithm:\n\\[\n\\begin{align}\n\\log \\mathcal{L}(\\theta, \\mathbf{y}; F) &= \\sum_{i=1}^n \\left[\\log \\frac{1}{\\sqrt{2\\pi}} - \\frac{1}{2\\sigma^2}(y_i - F(x_i; \\theta))  ^2 \\right] \\\\\n&= n \\log \\frac{1}{\\sqrt{2\\pi}} - \\frac{1}{2\\sigma^2} \\sum_{i=1}^n (y_i - F(x_i; \\theta))^2\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#example-mean-squared-error-3",
+    "href": "RIT-MathModeling/index.html#example-mean-squared-error-3",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Example: Mean-Squared Error",
+    "text": "Example: Mean-Squared Error\nIf we ignore the constants (including the assumed error standard deviation \\(\\sigma\\)), we’re left with wanting to maximize\n\\[-\\sum_{i=1}^n (y_i - F(x_i; \\theta))^2.\\]\n\nMaximizing this is equivalent to minimizing the negative:\n\\[\n\\sum_{i=1}^n (y_i - F(x_i; \\theta))^2 = \\text{MSE}\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#more-complicated-discrepancy-error-structures",
+    "href": "RIT-MathModeling/index.html#more-complicated-discrepancy-error-structures",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "More Complicated Discrepancy-Error Structures",
+    "text": "More Complicated Discrepancy-Error Structures\nWe can make similar estimatesfor more complex discrepancy structures (such as assuming normally-distributed errors and autoregressive discrepancy), but they may not result in “standard” error metrics."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#what-is-model-validation",
+    "href": "RIT-MathModeling/index.html#what-is-model-validation",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "What is Model Validation?",
+    "text": "What is Model Validation?\nKey Question: How do we know that our model is behaving as expected?\n\nWon’t spend too much time on this, but can use a combination of graphical checks and quantitative metrics (\\(R^2\\), RMSE)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#connection-between-validation-and-calibration",
+    "href": "RIT-MathModeling/index.html#connection-between-validation-and-calibration",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Connection Between Validation and Calibration",
+    "text": "Connection Between Validation and Calibration\nModel validation is often conditional on the calibration.\nHave to look at model output from a particular parameter vector (or set of parameter vectors)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#residual-checking",
+    "href": "RIT-MathModeling/index.html#residual-checking",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Residual Checking",
+    "text": "Residual Checking\nCheck 👏 Your 👏 Residuals!\nAre they consistent with the assumptions made when building your probability model for the data?\n\nFor example:\nWe calibrated our model with MSE. Are our residuals normally-distributed?"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#mathematical-model",
+    "href": "RIT-MathModeling/index.html#mathematical-model",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model\nRahmstorf (2007) proposed the following semi-empirical model for sea-level \\(H\\) response to changes to global mean temperature \\(T\\):\n\\[\\frac{dH}{dt} = \\alpha (T - T_0)\\]\n\n\\(T_0\\) is the temperature (\\(^\\circ C\\)) where sea-level is in equilibrium (\\(dH/dt = 0\\))\n\\(\\alpha\\) is the sea-level rise sensitivity to temperature."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#plotting-the-data",
+    "href": "RIT-MathModeling/index.html#plotting-the-data",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Plotting the Data",
+    "text": "Plotting the Data"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#model-calibration-1",
+    "href": "RIT-MathModeling/index.html#model-calibration-1",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Model Calibration",
+    "text": "Model Calibration\nLet’s calibrate this model, assuming normal discrepancy (so minimize MSE). First, we need to discretize it:\n\n\\[\n\\begin{gather}\n\\frac{dH}{dt} = \\alpha (T - T_0) \\\\[1em]\n\\frac{H(t+1) - H(t)}{\\Delta t} = \\alpha (T(t) - T_0) \\\\[1em]\nH(t+1) = \\alpha (T(t) - T_0) \\Delta t + H(t)\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#calibration-parameter-selection",
+    "href": "RIT-MathModeling/index.html#calibration-parameter-selection",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Calibration Parameter Selection",
+    "text": "Calibration Parameter Selection\nThis means we have three calibration parameters:\n\n\\(\\alpha\\),\n\\(T_0\\),\n\\(H(0)\\) (initial condition)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#calibration-results",
+    "href": "RIT-MathModeling/index.html#calibration-results",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Calibration Results",
+    "text": "Calibration Results\n\n\nOptimizing, we get:\n\n\\(\\alpha \\approx 1.86 \\text{mm} / ^\\circ C\\)\n\\(T_0 \\approx -0.97 ^\\circ C\\)\n\\(H(0) \\approx -157 \\text{mm}\\)."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#visualizing-residuals",
+    "href": "RIT-MathModeling/index.html#visualizing-residuals",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Visualizing Residuals",
+    "text": "Visualizing Residuals"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#are-the-residuals-normal-and-independent",
+    "href": "RIT-MathModeling/index.html#are-the-residuals-normal-and-independent",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Are The Residuals Normal And Independent?",
+    "text": "Are The Residuals Normal And Independent?"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#accounting-for-autocorrelation",
+    "href": "RIT-MathModeling/index.html#accounting-for-autocorrelation",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Accounting for Autocorrelation",
+    "text": "Accounting for Autocorrelation\nLet’s say we want to account for the autocorrelation in the residuals.\nWhere is this likely to enter into our discrepancy-error decomposition?"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#autocorrelated-discrepancy",
+    "href": "RIT-MathModeling/index.html#autocorrelated-discrepancy",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Autocorrelated Discrepancy",
+    "text": "Autocorrelated Discrepancy\nThen our probability model might look like this:\n\\[\n\\begin{align}\ny_t &= F(x_t; \\theta) + \\zeta_t + \\varepsilon_t \\\\[1.0em]\n\\zeta_t &\\sim \\rho \\zeta_{t-1} + \\omega_t \\\\[1.0em]\n\\varepsilon_t &\\sim \\mathcal{N}(0, \\sigma_\\varepsilon^2)\\\\[1.0em]\n\\omega_t &\\sim \\mathcal{N}(0, \\sigma_\\omega^2)\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#autocorrelated-discrepancy-1",
+    "href": "RIT-MathModeling/index.html#autocorrelated-discrepancy-1",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Autocorrelated Discrepancy",
+    "text": "Autocorrelated Discrepancy\nWe won’t go more deeply into this here – this doesn’t result in a “nice” error metric like the MSE.\nBut we could write out the probability distribution associated with this probability model (like we did with the MSE) and maximize, possibly treating the statistical parameters \\(\\rho, \\sigma_\\varepsilon^2, \\sigma_\\omega^2\\) as uncertain as well."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#uncertainty-analysis",
+    "href": "RIT-MathModeling/index.html#uncertainty-analysis",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Uncertainty Analysis",
+    "text": "Uncertainty Analysis\nEverything that we talked about so far involve point estimates: we get single values of parameters which give us a “best fit” to the provided data.\nWhen could this be a problem?\n\n\nWhat if our data is itself uncertain?\nWhat if multiple parameters are roughly equally consistent with the data?"
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#uncertainty-analysis-1",
+    "href": "RIT-MathModeling/index.html#uncertainty-analysis-1",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Uncertainty Analysis",
+    "text": "Uncertainty Analysis\nTo address these questions, we can quantify or characterize relevant uncertainties.\nMany methods, lots to do and learn here."
+  },
+  {
+    "objectID": "RIT-MathModeling/index.html#thanks",
+    "href": "RIT-MathModeling/index.html#thanks",
+    "title": "Introduction to Model Calibration and Uncertainty Quantification",
+    "section": "Thanks!",
+    "text": "Thanks!\nIf you’d like to follow up:\n\nLab Website: https://viveks.bee.cornell.edu\nEmail: viveks@cornell.edu"
+  },
+  {
     "objectID": "Dartmouth-CRM-2023-MORDM/index.html#to-follow-along.",
     "href": "Dartmouth-CRM-2023-MORDM/index.html#to-follow-along.",
     "title": "Introduction to Multi-Objective Robust Decision Making (MORDM)",
@@ -277,13 +536,6 @@
     "href": "index.html",
     "title": "Talks",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\n\n\n\n\nAbout\n\n\nundefined\n\n\nundefined\n\n\n\n\nIntroduction to Multi-Objective Robust Decision Making (MORDM)\n\n\n8/8/23\n\n\nInvalid Date\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nlocation\n\n\n\n\n\n\nAbout\n\n\n \n\n\n \n\n\n\n\nIntroduction to Model Calibration and Uncertainty Quantification\n\n\n10/17/23\n\n\nRIT\n\n\n\n\nIntroduction to Multi-Objective Robust Decision Making (MORDM)\n\n\n8/8/23\n\n\nDartmouth\n\n\n\n\n\nNo matching items"
   }
 ]
