@@ -1,0 +1,137 @@
+---
+title: "Navigating (Deep) Uncertainty in Modeling Climate Impacts"
+author: "Vivek Srikrishnan"
+course: "Mathematical Modeling Seminar"
+institution: "RIT"
+date: "October 17, 2023"
+location: "RIT"
+format:
+    revealjs:
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        width: 1280
+        height: 720
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../css/slides.scss
+        template-partials:
+            - ../title-slide.html
+        menu:
+            numbers: true
+        html-math-method: mathjax
+        include-in-header: ../mathjax-config.html
+        date-format: long
+        fig-align: center
+        pdf-page-height-offset: 1
+        pdf-separate-fragments: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+```{julia}
+import Pkg
+Pkg.activate(@__DIR__)
+Pkg.instantiate()
+```
+
+```{julia}
+using CSV
+using XLSX
+using DataFrames
+using Plots
+using Measures
+```
+
+# Introduction
+
+## GHG Emissions Cause Warming
+
+```{julia}
+#| layout-ncol: 2
+#| fig-align: center
+
+co2_data = XLSX.readdata("data/Global_Carbon_Budget_2022v1.0.xlsx", "Global Carbon Budget", "A21:C84")
+co2_df = DataFrame(co2_data[2:end, :], convert(Vector{String}, co2_data[1, :]))
+co2_df.total = (co2_df[!, 2] + co2_df[!, 3]) * 3.67 # convert to GtCO2
+co2_df.sigma = (0.05 * co2_df[!, 2] .+ 0.7) * 3.67
+p1 = plot(co2_df[!, :Year], co2_df[!, :total], ribbon=co2_df[!, :sigma], xlabel="Year", ylabel="Emissions (GtCO₂/yr)", legend=false, guidefontsize=16, tickfontsize=15, bottom_margin=10mm, left_margin=10mm, linewidth=2, fillalpha=0.2)
+xlims!(p1, (1850, 2023))
+vline!([1959], color=:red, linestyle=:dash)
+plot!(p1, size=(600, 500))
+display(p1)
+
+temps = CSV.read("data/HadCRUT.5.0.1.0.analysis.summary_series.global.annual.csv", DataFrame, delim=",")
+
+time_obs = temps[:, 1]
+temp_obs = temps[:, 2]
+temp_lo = temps[:, 3]
+temp_hi = temps[:, 4]
+
+temp_lo = temp_lo .- mean(temp_obs[1:20])
+temp_hi = temp_hi .- mean(temp_obs[1:20])
+temp_obs = temp_obs .- mean(temp_obs[1:20]) # compute anomalies relative to first 20 years of data
+
+p2 = plot(time_obs, temp_obs, ribbon=(temp_obs-temp_lo,temp_hi-temp_obs), color="blue", linewidth=2, fillalpha=0.2, legend=false, xlabel="Year", ylabel="Temperature Δ (°C)", guidefontsize=16, tickfontsize=15, bottom_margin=10mm, left_margin=10mm)
+xlims!(p2, (1850, 2023))
+vline!([1959], color=:red, linestyle=:dash)
+plot!(p2, size=(600, 500))
+display(p2)
+```
+
+::: {.caption}
+Source (left): Global Carbon Budget 2022, [Friedlingstein et al (2022)](https://essd.copernicus.org/articles/14/4811/2022/)
+
+Source (right): [HadCRUT5](https://crudata.uea.ac.uk/cru/data/temperature/)
+:::
+
+## Warming Causes Diverse Risks
+
+![Climate Risk Map](https://static01.nyt.com/images/2021/03/25/learning/ClimateRiskMapLN/ClimateRiskMapLN-superJumbo.png){width=90%}
+ 
+::: {.caption}
+Source: [Four Twenty Seven and the New York Times](https://www.nytimes.com/2021/03/25/learning/whats-going-on-in-this-graph-global-climate-risks.html)
+:::
+
+## Projected Impacts Are Highly Dependent on Future Emissions
+
+![Sea Level Rise Projections](figures/slr-projections.png)
+
+::: {.caption}
+Source: [IPCC AR6 Working Group 1, Technical Summary](https://www.ipcc.ch/report/ar6/wg1/)
+:::
+
+## What Are Future Emissions Scenarios?
+
+:::: {.columns}
+::: {.column width=60%}
+![CMIP6 SSP-RCP Scenarios](figures/cmip6-ssp.png)
+
+::: {.caption}
+Source: [O'Neill et al (2016)](http://dx.doi.org/10.5194/gmd-9-3461-2016)
+:::
+:::
+::: {.column width=40%}
+We use a handful of scenarios (the *Shared Socioeconomic Pathways-Representative Concentratio Pathways*, or **SSP-RCP scenarios**) for future emissions and radiative forcing.
+:::
+::::
+
+## Future Warming is Largely the Result of Cumulative Emissions
+
+:::: {.columns}
+::: {.column width=60%}
+![Cumulative Emissions and Temperature](figures/temperature-cumulative-co2-emisions-20140211.png)
+
+::: {.caption}
+Source: IPCC AR5 WG I
+:::
+:::
+::: {.column width=40%}
+For assessing temperature impacts, this works ok, because the growth in cumulative emissions is similar across scenarios.
+:::
+::::

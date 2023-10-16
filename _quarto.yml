@@ -22,4 +22,4 @@ format:
     css: css/styles.css
 
 
-
+jupyter: julia-1.9
