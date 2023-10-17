@@ -29,6 +29,7 @@ format:
         fig-align: center
         pdf-page-height-offset: 1
         pdf-separate-fragments: true
+        mermaid-format: png
 execute:
     freeze: auto
     echo: false
@@ -121,17 +122,236 @@ We use a handful of scenarios (the *Shared Socioeconomic Pathways-Representative
 :::
 ::::
 
-## Future Warming is Largely the Result of Cumulative Emissions
+## Why Quantify Scenario Uncertainty?
 
 :::: {.columns}
-::: {.column width=60%}
-![Cumulative Emissions and Temperature](figures/temperature-cumulative-co2-emisions-20140211.png)
+::: {.column width=50%}
+![Risk Taxonomy](figures/simpson_risk.svg)
 
 ::: {.caption}
-Source: IPCC AR5 WG I
+Source: [Simpson et al (2021)](http://dx.doi.org/10.1016/j.oneear.2021.03.005)
 :::
 :::
-::: {.column width=40%}
-For assessing temperature impacts, this works ok, because the growth in cumulative emissions is similar across scenarios.
+
+::: {.column width=50%}
+- Risk is hazard times consequences, not just consequences.
+- Given resource and political limits, important to understand what future scenarios are more or less plausible.
 :::
 ::::
+
+## Uncertainty Quantification: Caution Required!
+
+- Uncertainty quantification under these "deep" uncertainties necessarily involves subjective judgements.
+- **Essential to be transparent and analyze sensitivities to different choices!**
+
+## Key Questions
+
+::: {.incremental}
+1. What are the implications of historical dynamics on probabilities of scenarios of future CO~2~ emissions?
+2. How does emissions uncertainty interact with geophysical uncertainty when projecting climate impacts?
+:::
+
+# Historical Dynamics and Future CO~2~ Emissions
+
+## "Baseline" Emissions Projections
+
+Due to the reliance on historical data, we can only loosely consider future mitigation policies.
+
+But this still provides us with a baseline that can be used to understand future emissions trends.
+
+The results in this paper are from [Srikrishnan et al (2022)](https://doi.org/10.1007/s10584-021-03279-7), *Climatic Change*.
+
+## Model Structure
+
+:::: {.columns}
+::: {.column width=50%}
+```{mermaid}
+%%| fig-width: 3
+flowchart TD
+    A[Population\nGrowth] -- Labor Pool --> B(Economic Output)
+    B -- Emitting Technologies --> C{Emissions}
+    B -- Per-Capita\nIncome --> A
+```
+:::
+
+::: {.column width=50%}
+::: {.fragment .fade-in}
+Mixture of four emitting technologies:
+
+1. Preindustrial (no emissions)
+2. "Early"/High-emitting Fossil
+3. "Late"/Low-emitting Fossil
+4. Renewable
+:::
+:::
+::::
+
+## Model Structure
+
+:::: {.columns}
+::: {.column width=50%}
+```{mermaid}
+%%| fig-width: 3
+flowchart TD
+    A[Population\nGrowth] -- Labor Pool --> B(Economic Output)
+    B -- Emitting Technologies --> C{Emissions}
+    B -- Per-Capita\nIncome --> A
+```
+:::
+
+::: {.column width=50%}
+- Assume economic growth levels are constrained by fossil fuel availability unless the economy decarbonizes prior to exhausting fossil fuels.
+- Consider three fossil fuel availability scenarios
+:::
+::::
+
+
+## Correlated Priors Require More Care
+
+:::: {.columns}
+::: {.column width=50%}
+- We can place (weakly) informed priors on individual parameters, but many are actually correlated.
+- Need to constrain current energy technology shares.
+:::
+
+::: {.column width=50%}
+![Schematic of Probabilistic Inversion](figures/fuller-probinv.png)
+
+::: {.caption}
+Source: [Fuller et al (2017)](http://dx.doi.org/10.1371/journal.pone.0190115)
+:::
+:::
+::::
+
+## Overview of Calibration Data
+
+::: {.incremental}
+- Population and economic growth data from 1820--2020 from the [Maddison Project](https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020?lang=en) and the World Bank
+- Fossil emissions from 1820--2020 from [Boden et al (2017)](http://dx.doi.org/10.3334/CDIAC/00001_V2017) and the [Global Carbon Project](https://www.globalcarbonproject.org/)
+- Expert assessments of 2100: population (UN), economic output ([Christensen et al (2018)](http://dx.doi.org/10.1073/pnas.1713628115)), CO~2~ emissions ([Ho et al (2019)](http://dx.doi.org/10.1007/s10584-019-02500-y))
+- Energy fuel share data from BP World Energy Outlook (2020)
+:::
+
+## Statistical Model
+
+We use a VAR(1) model for discrepancies between the simulation model output ($M(\mathbf{\theta})$) and data ($\mathbf{z}$) as well as independent observation errors:
+
+$$
+\begin{align}
+\mathbf{z}_t &= \mathbf{M}(\theta)_t + \mathbf{x}_t + \varepsilon_t\\[0.5em]
+\mathbf{x}_t &= A\mathbf{x}_{t-1} + \omega_t
+\end{align}
+$$
+
+## Lower Emissions Are More Probable...
+
+![Emissions Model Output](figures/emissions-results.png)
+
+## ...But Not Enough To Achieve Goals
+
+:::: {.columns}
+::: {.column width=45%}
+![CDF of Emissions Projections](figures/emissions-cdf.png)
+:::
+::: {.column width=55%}
+- Green region are emissions consistent with a 50% probability of achieving the 2$^\circ$ C Paris Agreement target.
+- Missing scenarios which span the bulk of the probability distribution.
+:::
+::::
+
+## Emissions Sensitive To Interactions
+
+![Sensitivity Results](figures/emissions-sensitivity.png)
+
+# Impact of Delaying Decarbonization on Sea Levels
+
+## Uncertainty and Sea-Level Rise
+
+![Sea Level Rise Projections](figures/slr-projections.png)
+
+::: {.caption}
+Source: [IPCC AR6 Working Group 1, Technical Summary](https://www.ipcc.ch/report/ar6/wg1/)
+:::
+
+## Motivating Questions
+
+1. What are the relative impacts of emissions and geophysical uncertainties on sea levels?
+2. How does delaying decarbonization impact extreme sea level outcomes?
+
+These results are in prep, led by Chloe Darnell (graduated M.S. student).
+
+## Contributors to Global Mean Sea Level
+
+![Components of GMSLR](figures/sea-processes.png)
+
+## Model Framework
+
+:::: {.columns}
+::: {.column width=50%}
+```{mermaid}
+%%| fig-width: 3.5
+flowchart TD
+A[Emissions Model] -- GHG Emissions --> B["Carbon Cycle Model\n(SNEASY)"] 
+B -- Radiative Forcing --> C["Climate Model\n(DOECLIM)"] 
+C -- Global Temperature \n Ocean Heat --> D["Sea-Level Model\n(BRICK)"]
+D ~~~ A
+D ~~~ B
+```
+:::
+::: {.column width=50%}
+Apply uncertainties throughout the model chain:
+
+- Develop probabilistic ensemble of emissions;
+- Propagate with jointly calibrated geophysical uncertainties
+:::
+::::
+
+## Low Emissions Can Result In High SLR
+
+![Model Results](figures/slr_temps.png)
+
+## Emissions Uncertainty Become Important Before 2100
+
+:::: {.columns}
+::: {.column width=40%}
+- Fit regression tree to sea-level projection every 5 years.
+- Estimated grouped parameter importance with Shapley indices.
+:::
+::: {.column width=60%}
+![Shapley Indices](figures/stacked-shapley-index.png){width=80%}
+:::
+::::
+
+## Delaying Decarbonization Reduces the Geophysical Safe Operating Space
+
+:::: {.columns}
+::: {.column width=50%}
+![Factor Map](figures/importance_bar.png)
+:::
+::: {.column width=50%}
+![Factor Map](figures/factor_map.png){width=90%}
+:::
+::::
+
+# Summary
+
+## Key Points
+
+- Assigning probabilities to deeply uncertain outcomes should be done carefully;
+- Avoiding this doesn't solve any problems (and may create more!)
+
+## Key Points
+
+- We look at the specific example of future CO~2~ emissions;
+- Probabilistic analyses help us understand the drivers of future emissions and impact of joint emissions-geophysical uncertainties.
+
+## Key Points
+
+- **Key**: Transparently laying out assumptions and providing framework/code for others to repeat the analysis under different setups.
+
+## Thanks!
+
+For further follow-up/discussion:
+
+- Email: [viveks@cornell.edu](mailto:viveks@cornell.edu)
+- Lab Website: <https://viveks.bee.cornell.edu>
